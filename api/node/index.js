@@ -4,8 +4,6 @@ module.exports.getDockerOptions = function(host, application, envVars, MbOfRAM, 
     envVarArr.push(i + '=' + envVars[i]);
   }
   return {
-    containerName: host,
-    imageName: application,
     createOptions: {
       Image: 'indiehosters/' + application,
       name: host,
